@@ -7,12 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+        .bg{
+            background-image: linear-gradient(to right bottom, #4dbaa9, #279fa9, #27839f, #39678a, #424c6d);
+        }
+    </style>
+
     <title>Weather app</title>
 </head>
 <!-- flex justify-center items-center -->
 <body>
     <div class="container mx-auto flex justify-center items-center h-screen">
-        <div class="w-3/12 mx-auto bg-gradient-to-r from-cyan-500 to-blue-500 min-h-[600px] rounded-xl">
+        <div class="w-3/12 mx-auto bg min-h-[600px] rounded-xl">
             <div class="flex justify-center items-center pt-12 mb-4">
                 <input id="country-name" type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs" />
                 <button onclick="showWeather(this)" class="btn btn-outline btn-accent absolute ml-[230px]">Search</button>
