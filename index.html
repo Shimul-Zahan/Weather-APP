@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisy ui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Weather app</title>
+</head>
+<!-- flex justify-center items-center -->
+<body>
+    <div class="container mx-auto flex justify-center items-center h-screen">
+        <div class="w-3/12 mx-auto bg-gradient-to-r from-cyan-500 to-blue-500 min-h-[600px] rounded-xl">
+            <div class="flex justify-center items-center pt-12 mb-4">
+                <input id="country-name" type="text" placeholder="Type here" class="input input-bordered input-accent w-full max-w-xs" />
+                <button onclick="showWeather(this)" class="btn btn-outline btn-accent absolute ml-[230px]">Search</button>
+            </div>
+            <div class="flex justify-center items-center mb-10">
+                <img src="./images/rain.png" alt="" width="150">
+            </div>
+
+            <div class="text-center space-y-4">
+                <h1 class="text-5xl font-medium text-white"><span id="tempareture">33</span>°C</h1>
+                <h1 id="country" class="text-3xl font-medium text-white">Rajshahi</h1>
+            </div>
+
+            <div class="flex justify-between items-center px-8 mt-20">
+                <div class="flex justify-center items-center gap-2">
+                    <div>
+                        <img src="./images/humidity.png" alt="" width="50">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-medium text-white"><span id="humidity">53</span>%</h1>
+                        <p class="text-base font-medium text-white">Humidity</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center items-center gap-2">
+                    <div>
+                        <img src="./images//wind.png" alt="" width="50">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-medium text-white"><span id="wind-speed">44</span> km/h</h1>
+                        <p class="text-base font-medium text-white">Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./weather js/app.js"></script>
+</body>
+</html>
