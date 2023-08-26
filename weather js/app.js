@@ -8,13 +8,31 @@ function getWeather(cityName) {
 
         .then(responce => responce.json())
         .then(data => {
-            const tempareture = document.getElementById('tempareture').innerText = Math.round(data.main.temp);
-            const country = document.getElementById('country').innerText = data.name;
-            const humidity = document.getElementById('humidity').innerText = data.main.humidity;
-            const speed = document.getElementById('wind-speed').innerText = data.wind.speed
-;
+            document.getElementById('tempareture').innerText = Math.round(data.main.temp);
+            document.getElementById('country').innerText = data.name;
+            document.getElementById('humidity').innerText = data.main.humidity;
+            document.getElementById('wind-speed').innerText = data.wind.speed;
             document.getElementById('country-name').value = '';
-            console.log(data)
+            const weather = data.weather[0].main;
+            if (weather === 'Clouds') {
+                document.getElementById('image').src = './images/clouds.png';
+            }
+            if (weather === 'Rain') {
+                document.getElementById('image').src = './images/rain.png';
+            }
+            if (weather === 'Drizzle') {
+                document.getElementById('image').src = './images/drizzle.png';
+            }
+            if (weather === 'Snow') {
+                document.getElementById('image').src = './images/snow.png';
+            }
+            if (weather === 'Clear') {
+                document.getElementById('image').src = './images/clear.png';
+            }
+            if (weather === 'Mist') {
+                document.getElementById('image').src = './images/mist.png';
+            }
+            console.log(weather)
         });
 }
 
